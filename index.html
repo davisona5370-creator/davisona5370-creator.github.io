@@ -1,150 +1,151 @@
-                                                                                                
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="logo.png" alt="Spartan Gym Logo" class="hero-logo">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPARTAN GYM</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+    body{background:#0a0a0a;color:#fff}
 
-<title>SPARTAN GYM</title>
+    /* HERO */
+    .hero{
+      height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
+      url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      flex-direction: column;
+    }
+    .hero h1{font-size:60px;color:#ff0000;letter-spacing:3px;margin-top:20px;}
+    .hero p{font-size:22px;margin-top:15px}
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#0a0a0a;color:#fff}
+    /* HERO LOGO */
+    .hero-logo{
+      width:170px;
+      display:block;
+      filter: drop-shadow(0 0 15px red);
+    }
 
-/* HERO */
-.hero{
-height:90vh;
-background:
-linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
-url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-.hero h1{font-size:60px;color:#ff0000;letter-spacing:3px}
-.hero p{font-size:22px;margin-top:15px}
+    /* SECTION */
+    .section{padding:70px 20px;max-width:1200px;margin:auto}
+    .title{
+      text-align:center;
+      font-size:38px;
+      color:#ff4d4d;
+      margin-bottom:40px;
+    }
 
-/* SECTION */
-.section{padding:70px 20px;max-width:1200px;margin:auto}
-.title{
-text-align:center;
-font-size:38px;
-color:#ff4d4d;
-margin-bottom:40px;
-}
+    /* PROGRAMS */
+    .programs{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+    .card{
+      background:#151515;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 0 25px rgba(255,0,0,.35);
+    }
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+    .card div{
+      padding:20px;
+      text-align:center;
+    }
+    .card h3{color:#ff4d4d;margin-bottom:10px}
 
-/* PROGRAMS */
-.programs{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-.card{
-background:#151515;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 0 25px rgba(255,0,0,.35);
-}
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-.card div{
-padding:20px;
-text-align:center;
-}
-.card h3{color:#ff4d4d;margin-bottom:10px}
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+    .gallery img{
+      width:100%;
+      border-radius:15px;
+      box-shadow:0 0 20px rgba(255,0,0,.3);
+    }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.gallery img{
-width:100%;
-border-radius:15px;
-box-shadow:0 0 20px rgba(255,0,0,.3);
-}
+    /* FEES */
+    .fees{
+      background:#111;
+      padding:40px;
+      border-radius:20px;
+      text-align:center;
+      max-width:600px;
+      margin:auto;
+    }
 
-/* FEES */
-.fees{
-background:#111;
-padding:40px;
-border-radius:20px;
-text-align:center;
-max-width:600px;
-margin:auto;
-}
+    /* FORM */
+    .form-box{
+      max-width:500px;
+      margin:auto;
+      background:#151515;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 0 25px rgba(255,0,0,.4);
+    }
+    input,textarea{
+      width:100%;
+      padding:14px;
+      margin:10px 0;
+      border-radius:10px;
+      border:none;
+    }
+    button{
+      width:100%;
+      padding:14px;
+      background:#ff0000;
+      color:#fff;
+      border:none;
+      border-radius:30px;
+      font-size:18px;
+    }
 
-/* FORM */
-.form-box{
-max-width:500px;
-margin:auto;
-background:#151515;
-padding:30px;
-border-radius:20px;
-box-shadow:0 0 25px rgba(255,0,0,.4);
-}
-input,textarea{
-width:100%;
-padding:14px;
-margin:10px 0;
-border-radius:10px;
-border:none;
-}
-button{
-width:100%;
-padding:14px;
-background:#ff0000;
-color:#fff;
-border:none;
-border-radius:30px;
-font-size:18px;
-}
+    /* CONTACT */
+    .contact{
+      background:#111;
+      padding:40px;
+      border-radius:20px;
+      text-align:center;
+    }
+    .contact a{
+      display:inline-block;
+      margin:10px;
+      padding:14px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      color:#fff;
+    }
+    .call{background:#ff0000}
+    .whatsapp{background:#25D366}
 
-/* CONTACT */
-.contact{
-background:#111;
-padding:40px;
-border-radius:20px;
-text-align:center;
-}
-.contact a{
-display:inline-block;
-margin:10px;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-color:#fff;
-}
-.call{background:#ff0000}
-.whatsapp{background:#25D366}
-
-/* FOOTER */
-footer{
-background:black;
-text-align:center;
-padding:20px;
-color:#aaa;
-}
-.hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero-logo{
-  width:170px;
-  margin:0 auto 20px;
-  display:block;
-  filter: drop-shadow(0 0 15px red);
-}
-</style>
+    /* FOOTER */
+    footer{
+      background:black;
+      text-align:center;
+      padding:20px;
+      color:#aaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <img src="logo.png" alt="Spartan Gym Logo" class="hero-logo">
+    <h1>SPARTAN GYM</h1>
+    <p>Your Fitness, Our Mission</p>
+  </div>
+</body>
+</html>
