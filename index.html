@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +13,13 @@ body{background:#0a0a0a;color:#fff}
 /* HERO */
 .hero{
 height:90vh;
-background:
-linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
-url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
+background:#000;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 }
-
-.hero h1{font-size:60px;color:#ff0000;letter-spacing:3px}
+.hero h1{font-size:55px;color:#ff0000;letter-spacing:3px}
 .hero p{font-size:22px;margin-top:15px}
 
 .hero-logo{
@@ -34,8 +30,8 @@ filter: drop-shadow(0 0 15px red);
 }
 
 /* SECTION */
-.section{padding:70px 20px;max-width:1200px;margin:auto}
-.title{text-align:center;font-size:38px;color:#ff4d4d;margin-bottom:40px}
+.section{padding:60px 20px;max-width:1200px;margin:auto}
+.title{text-align:center;font-size:36px;color:#ff4d4d;margin-bottom:40px}
 
 /* PROGRAMS */
 .programs{
@@ -47,7 +43,7 @@ gap:25px;
 background:#151515;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 0 25px rgba(255,0,0,.35);
+box-shadow:0 0 20px rgba(255,0,0,.3);
 }
 .card img{
 width:100%;
@@ -56,28 +52,6 @@ object-fit:cover;
 }
 .card div{padding:20px;text-align:center}
 .card h3{color:#ff4d4d;margin-bottom:10px}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.gallery img{
-width:100%;
-border-radius:15px;
-box-shadow:0 0 20px rgba(255,0,0,.3);
-}
-
-/* FEES */
-.fees{
-background:#111;
-padding:40px;
-border-radius:20px;
-text-align:center;
-max-width:600px;
-margin:auto;
-}
 
 /* CONTACT */
 .contact{
@@ -93,9 +67,24 @@ padding:14px 30px;
 border-radius:30px;
 text-decoration:none;
 color:#fff;
+font-size:18px;
 }
 .call{background:#ff0000}
 .whatsapp{background:#25D366}
+
+/* FLOATING WHATSAPP */
+.float-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50%;
+font-size:26px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+}
 
 footer{
 background:black;
@@ -111,8 +100,7 @@ color:#aaa;
 <!-- HERO -->
 <div class="hero">
   <div>
-    <!-- LOGO -->
-    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=400&q=80" class="hero-logo" alt="Spartan Gym Logo">
+    <img src="images/logo.jpg" class="hero-logo">
     <h1>SPARTAN GYM</h1>
     <p>Muscle • Strength • Transformation</p>
   </div>
@@ -121,10 +109,11 @@ color:#aaa;
 <!-- PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
+
 <div class="programs">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80" alt="Muscle Gain">
+<img src="images/muscle.jpg">
 <div>
 <h3>💪 Muscle Gain</h3>
 <p>Build size & strength.</p>
@@ -132,8 +121,7 @@ color:#aaa;
 </div>
 
 <div class="card">
-<!-- 🔥 WEIGHT LOSS IMAGE (FIXED & WORKING) -->
-<img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=900&q=80" alt="Weight Loss">
+<img src="images/weightloss.jpg">
 <div>
 <h3>🔥 Weight Loss</h3>
 <p>Fat burn & HIIT training.</p>
@@ -141,7 +129,7 @@ color:#aaa;
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=900&q=80" alt="Strength Training">
+<img src="images/strength.jpg">
 <div>
 <h3>⚡ Strength Training</h3>
 <p>Increase power & endurance.</p>
@@ -151,43 +139,31 @@ color:#aaa;
 </div>
 </div>
 
-<!-- GALLERY -->
-<div class="section">
-<div class="title">GYM GALLERY</div>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80">
-<img src="https://images.unsplash.com/photo-1584467735871-b2c5b1a9c8d5?auto=format&fit=crop&w=900&q=80">
-<img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&w=900&q=80">
-</div>
-</div>
-
-<!-- FEES -->
-<div class="section">
-<div class="title">MEMBERSHIP FEES</div>
-<div class="fees">
-<p style="font-size:22px">
-Original Price:
-<span style="text-decoration:line-through;color:#aaa">₹1000</span>
-</p>
-<p style="font-size:30px;color:#25D366;font-weight:bold;margin:10px 0">
-40% – 50% DISCOUNT
-</p>
-<p>Limited Time Offer</p>
-</div>
-</div>
-
 <!-- CONTACT -->
 <div class="section">
 <div class="title">CONTACT US</div>
+
 <div class="contact">
 📍 Plot No A-3, Near SBI ATM,<br>
 Vikas Nagar, Karnal Bhatiya Road,<br>
 New Delhi – 110059<br><br>
 
 <a href="tel:9716127116" class="call">📞 Call Now</a>
-<a href="https://wa.me/919716127116" class="whatsapp">💬 WhatsApp</a>
+
+<!-- 🔥 DIRECT WHATSAPP MESSAGE -->
+<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%0AI%20want%20to%20join%20the%20gym" 
+class="whatsapp">
+💬 WhatsApp Now
+</a>
+
 </div>
 </div>
+
+<!-- FLOATING WHATSAPP -->
+<a class="float-whatsapp"
+href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%0AI%20want%20to%20join">
+💬
+</a>
 
 <footer>
 © 2025 SPARTAN GYM | NO EXCUSES 💪
