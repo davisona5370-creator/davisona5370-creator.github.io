@@ -28,13 +28,28 @@ inset:0;
 background:rgba(0,0,0,.8);
 }
 .hero-content{position:relative;z-index:1}
+
+/* GYM NAME STYLE */
+.gym-name{
+font-size:68px;
+letter-spacing:6px;
+background:linear-gradient(90deg,#ff1e1e,#f5c16c,#ff1e1e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 25px rgba(255,0,0,.6);
+}
+
 .hero-logo{
-width:180px;
+width:170px;
 margin-bottom:20px;
 filter:drop-shadow(0 0 25px red);
 }
-.hero h1{font-size:64px;color:#ff1e1e;letter-spacing:4px}
-.hero p{font-size:22px;color:#f5c16c}
+
+.hero p{
+font-size:22px;
+color:#f5c16c;
+margin-top:10px;
+}
 
 /* SECTION */
 .section{padding:80px 20px;max-width:1200px;margin:auto}
@@ -47,30 +62,39 @@ margin:0 auto 50px;
 font-size:18px;
 }
 
-/* PROGRAMS */
+/* PROGRAM SLIDER */
+.slider-wrapper{
+overflow:hidden;
+position:relative;
+}
+
 .programs{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+display:flex;
 gap:30px;
+animation:slide 25s linear infinite;
+}
+
+.slider-wrapper:hover .programs{
+animation-play-state:paused;
+}
+
+@keyframes slide{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
 }
 
 .program{
+min-width:300px;
 background:#141414;
 border-radius:25px;
 padding:35px;
 text-align:center;
 box-shadow:0 0 30px rgba(255,0,0,.35);
-transition:.4s;
-}
-
-.program:hover{
-transform:translateY(-10px);
-box-shadow:0 0 45px rgba(255,0,0,.6);
 }
 
 .program h3{
 color:#f5c16c;
-font-size:26px;
+font-size:24px;
 margin-bottom:15px;
 }
 
@@ -184,7 +208,7 @@ color:#888;
 <div class="hero" id="hero">
   <div class="hero-content">
     <img src="logo.png" class="hero-logo">
-    <h1>SPARTAN GYM</h1>
+    <div class="gym-name">SPARTAN GYM</div>
     <p>Strong Body • Strong Mind • Strong Life</p>
   </div>
 </div>
@@ -193,44 +217,44 @@ color:#888;
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
 <p class="subtitle">
-Har body alag hoti hai.  
-Isliye hamare programs **result-oriented** hote hain 💪
+Results ke liye design kiye gaye programs 💪
 </p>
 
+<div class="slider-wrapper">
 <div class="programs">
 
 <div class="program">
 <h3>💪 Muscle Building</h3>
-<p>
-Jo log lean body se muscular body banana chahte hain.  
-Proper weight training, form guidance aur diet support ke sath.
-</p>
+<p>Lean se muscular body ke liye proper weight training.</p>
 </div>
 
 <div class="program">
 <h3>🔥 Weight Loss</h3>
-<p>
-Fat loss ke liye cardio, HIIT aur functional workouts.  
-Healthy tarike se weight kam karo, body fit banao.
-</p>
+<p>Cardio + HIIT se healthy fat loss.</p>
 </div>
 
 <div class="program">
 <h3>⚡ Strength Training</h3>
-<p>
-Power, stamina aur endurance badhane ke liye.  
-Daily life aur sports performance dono improve hoti hai.
-</p>
+<p>Power, stamina aur endurance boost.</p>
 </div>
 
 <div class="program">
 <h3>🏋️ General Fitness</h3>
-<p>
-Beginners ke liye best.  
-Full body workout, flexibility aur overall fitness pe focus.
-</p>
+<p>Beginners ke liye complete body fitness.</p>
 </div>
 
+<!-- DUPLICATE FOR SMOOTH LOOP -->
+<div class="program">
+<h3>💪 Muscle Building</h3>
+<p>Lean se muscular body ke liye proper weight training.</p>
+</div>
+
+<div class="program">
+<h3>🔥 Weight Loss</h3>
+<p>Cardio + HIIT se healthy fat loss.</p>
+</div>
+
+</div>
 </div>
 </div>
 
@@ -244,16 +268,6 @@ Full body workout, flexibility aur overall fitness pe focus.
 <a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join" class="join-btn">
 JOIN NOW ON WHATSAPP
 </a>
-</div>
-</div>
-
-<!-- GALLERY -->
-<div class="section">
-<div class="title">GYM GALLERY</div>
-<div class="gallery">
-<img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg">
-<img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg">
-<img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg">
 </div>
 </div>
 
@@ -271,7 +285,6 @@ JOIN NOW ON WHATSAPP
 <div class="contact">
 📍 Plot No A-3, Near SBI ATM,<br>
 Vikas Nagar, New Delhi – 110059<br><br>
-
 <a href="tel:9716127116" class="call">📞 Call Now</a>
 <a href="https://wa.me/919716127116" class="whatsapp">💬 WhatsApp</a>
 </div>
@@ -284,7 +297,7 @@ Vikas Nagar, New Delhi – 110059<br><br>
 </footer>
 
 <script>
-/* HERO IMAGE CHANGE */
+/* HERO IMAGE AUTO CHANGE */
 const heroImages=[
 "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
 "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
