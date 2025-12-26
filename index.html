@@ -48,11 +48,7 @@ font-size:18px;
 }
 
 /* PROGRAM SLIDER */
-.slider{
-display:flex;
-gap:30px;
-overflow:hidden;
-}
+.slider{display:flex;gap:30px;overflow:hidden}
 .slide{
 min-width:320px;
 background:#141414;
@@ -60,28 +56,60 @@ border-radius:25px;
 box-shadow:0 0 35px rgba(255,0,0,.35);
 transition:.4s;
 }
-.slide:hover{
-transform:scale(1.05);
-box-shadow:0 0 45px rgba(255,0,0,.6);
-}
+.slide:hover{transform:scale(1.05)}
 .slide img{
 width:100%;
 height:240px;
 object-fit:cover;
 border-radius:25px 25px 0 0;
 }
-.slide div{
-padding:30px;
+.slide div{padding:30px;text-align:center}
+.slide h3{color:#f5c16c;font-size:24px;margin-bottom:10px}
+.slide p{color:#ccc}
+
+/* FEES */
+.fees-box{
+background:linear-gradient(145deg,#120000,#1a0000);
+border-radius:30px;
+padding:50px;
 text-align:center;
+box-shadow:0 0 50px rgba(255,0,0,.4);
+animation:glow 2s infinite alternate;
 }
-.slide h3{
+@keyframes glow{
+from{box-shadow:0 0 25px rgba(255,0,0,.4)}
+to{box-shadow:0 0 55px rgba(255,0,0,.8)}
+}
+.old-price{
+font-size:26px;
+color:#aaa;
+text-decoration:line-through;
+}
+.new-offer{
+font-size:44px;
+color:#25D366;
+font-weight:bold;
+margin:15px 0;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.08)}
+100%{transform:scale(1)}
+}
+.limited{
 color:#f5c16c;
-font-size:24px;
-margin-bottom:10px;
+letter-spacing:2px;
+margin-bottom:25px;
 }
-.slide p{
-color:#ccc;
-line-height:1.6;
+.join-btn{
+display:inline-block;
+padding:16px 40px;
+background:#ff1e1e;
+border-radius:40px;
+color:white;
+font-size:20px;
+text-decoration:none;
 }
 
 /* GALLERY */
@@ -139,7 +167,6 @@ text-decoration:none;
 box-shadow:0 0 25px rgba(0,0,0,.6);
 }
 
-/* FOOTER */
 footer{
 background:black;
 text-align:center;
@@ -163,21 +190,14 @@ color:#888;
 <!-- PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
-<p class="subtitle">
-Yahan sirf workout nahi hota.  
-Yahan **warriors bante hain** 💪
-</p>
+<p class="subtitle">Yahan sirf workout nahi hota – yahan warriors bante hain 💪</p>
 
 <div class="slider" id="programSlider">
-
 <div class="slide">
 <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
 <div>
 <h3>💪 BEAST MODE MUSCLE</h3>
-<p>
-Heavy lifting + discipline.  
-Jo log **size, shape aur power** chahte hain.
-</p>
+<p>Heavy lifting for serious size & power.</p>
 </div>
 </div>
 
@@ -185,10 +205,7 @@ Jo log **size, shape aur power** chahte hain.
 <img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
 <div>
 <h3>🔥 EXTREME FAT BURN</h3>
-<p>
-HIIT + cardio madness.  
-Pasina, burn aur **fast results**.
-</p>
+<p>HIIT + cardio = visible fat loss.</p>
 </div>
 </div>
 
@@ -196,24 +213,23 @@ Pasina, burn aur **fast results**.
 <img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
 <div>
 <h3>⚡ STRENGTH & POWER</h3>
-<p>
-Pure strength focus.  
-Lift heavy. Feel unstoppable.
-</p>
+<p>Lift heavier. Feel unstoppable.</p>
+</div>
+</div>
 </div>
 </div>
 
-<div class="slide">
-<img src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg">
-<div>
-<h3>🏋️ ATHLETIC FITNESS</h3>
-<p>
-Agility, stamina & full-body control.  
-Move like an athlete.
-</p>
-</div>
-</div>
+<!-- FEES -->
+<div class="section">
+<div class="title">MEMBERSHIP FEES</div>
 
+<div class="fees-box">
+<p class="old-price">₹1000 / Month</p>
+<div class="new-offer">40% – 50% OFF</div>
+<div class="limited">LIMITED TIME OFFER</div>
+<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join" class="join-btn">
+JOIN NOW ON WHATSAPP
+</a>
 </div>
 </div>
 
@@ -243,18 +259,18 @@ Move like an athlete.
 Vikas Nagar, New Delhi – 110059<br><br>
 
 <a href="tel:9716127116" class="call">📞 Call Now</a>
-<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join" class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/919716127116" class="whatsapp">💬 WhatsApp</a>
 </div>
 </div>
 
 <a href="https://wa.me/919716127116" class="float-whatsapp">💬</a>
 
 <footer>
-© 2025 SPARTAN GYM | WARRIORS TRAIN HERE 💪
+© 2025 SPARTAN GYM | NO EXCUSES • ONLY RESULTS 💪
 </footer>
 
 <script>
-/* HERO AUTO IMAGE */
+/* HERO IMAGE AUTO CHANGE */
 const heroImages=[
 "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
 "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
@@ -267,11 +283,11 @@ hero.style.backgroundImage=`url(${heroImages[hi]})`;
 hi=(hi+1)%heroImages.length;
 },5000);
 
-/* PROGRAM AUTO SLIDE */
+/* PROGRAM SLIDER AUTO MOVE */
 const slider=document.getElementById("programSlider");
 setInterval(()=>{
 slider.scrollBy({left:350,behavior:"smooth"});
-if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth-5){
+if(slider.scrollLeft+slider.clientWidth>=slider.scrollWidth-5){
 slider.scrollTo({left:0,behavior:"smooth"});
 }
 },3000);
