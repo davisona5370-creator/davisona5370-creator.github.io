@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="logo.png" alt="Spartan Gym Logo" class="hero-logo">
-
 <title>SPARTAN GYM</title>
 
 <style>
@@ -27,14 +25,16 @@ text-align:center;
 .hero h1{font-size:60px;color:#ff0000;letter-spacing:3px}
 .hero p{font-size:22px;margin-top:15px}
 
+.hero-logo{
+width:170px;
+margin:0 auto 20px;
+display:block;
+filter: drop-shadow(0 0 15px red);
+}
+
 /* SECTION */
 .section{padding:70px 20px;max-width:1200px;margin:auto}
-.title{
-text-align:center;
-font-size:38px;
-color:#ff4d4d;
-margin-bottom:40px;
-}
+.title{text-align:center;font-size:38px;color:#ff4d4d;margin-bottom:40px}
 
 /* PROGRAMS */
 .programs{
@@ -53,10 +53,7 @@ width:100%;
 height:200px;
 object-fit:cover;
 }
-.card div{
-padding:20px;
-text-align:center;
-}
+.card div{padding:20px;text-align:center}
 .card h3{color:#ff4d4d;margin-bottom:10px}
 
 /* GALLERY */
@@ -125,26 +122,11 @@ color:#fff;
 .call{background:#ff0000}
 .whatsapp{background:#25D366}
 
-/* FOOTER */
 footer{
 background:black;
 text-align:center;
 padding:20px;
 color:#aaa;
-}
-.hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero-logo{
-  width:170px;
-  margin:0 auto 20px;
-  display:block;
-  filter: drop-shadow(0 0 15px red);
 }
 </style>
 </head>
@@ -154,6 +136,7 @@ color:#aaa;
 <!-- HERO -->
 <div class="hero">
 <div>
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" class="hero-logo">
 <h1>SPARTAN GYM</h1>
 <p>Muscle • Strength • Transformation</p>
 </div>
@@ -168,7 +151,7 @@ color:#aaa;
 <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
 <div>
 <h3>💪 Muscle Gain</h3>
-<p>Build size & strength with heavy workouts.</p>
+<p>Build size & strength.</p>
 </div>
 </div>
 
@@ -176,16 +159,15 @@ color:#aaa;
 <img src="https://images.unsplash.com/photo-1579758629938-03608ccdbaba">
 <div>
 <h3>🔥 Weight Loss</h3>
-<p>Fat burn with cardio & HIIT training.</p>
+<p>Fat burn training.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="weight-loss.jpg">
-
+<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
 <div>
 <h3>⚡ Strength Training</h3>
-<p>Increase power and endurance.</p>
+<p>Increase power.</p>
 </div>
 </div>
 
@@ -202,66 +184,9 @@ color:#aaa;
 </div>
 </div>
 
-<!-- FEES -->
-<div class="section">
-<div class="title">MEMBERSHIP FEES</div>
-<div class="fees">
-<p style="font-size:22px">
-Original Price:
-<span style="text-decoration:line-through;color:#aaa">₹1000</span>
-</p>
-<p style="font-size:30px;color:#25D366;font-weight:bold;margin:10px 0">
-40% – 50% DISCOUNT
-</p>
-<p>Limited Time Offer</p>
-</div>
-</div>
-
-<!-- JOIN FORM -->
-<div class="section">
-<div class="title">JOIN NOW</div>
-<div class="form-box">
-<form onsubmit="sendWhatsApp(); return false;">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="mobile" placeholder="Mobile Number" required>
-<textarea id="goal" placeholder="Your Goal (Muscle / Weight Loss)"></textarea>
-<button type="submit">Send on WhatsApp</button>
-</form>
-</div>
-</div>
-
-<!-- ADDRESS -->
-<div class="section">
-<div class="title">OUR ADDRESS</div>
-<div class="contact">
-📍 Plot No A-3, Near SBI ATM, Meat Shop<br>
-Vikas Nagar, Karnal Bhatiya Road,<br>
-New Delhi – 110059
-</div>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-<div class="title">CONTACT US</div>
-<div class="contact">
-<a href="tel:9716127116" class="call">📞 Call Now</a>
-<a href="https://wa.me/919716127116" class="whatsapp">💬 WhatsApp</a>
-</div>
-</div>
-
 <footer>
 © 2025 SPARTAN GYM | NO EXCUSES 💪
 </footer>
-
-<script>
-function sendWhatsApp(){
-var n=name.value;
-var m=mobile.value;
-var g=goal.value;
-var msg="Hello SPARTAN GYM 💪%0AName: "+n+"%0AMobile: "+m+"%0AGoal: "+g;
-window.open("https://wa.me/919716127116?text="+msg,"_blank");
-}
-</script>
 
 </body>
 </html>
