@@ -9,35 +9,26 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:#0a0a0a;color:#fff}
 
-/* HERO */
 .hero{
 height:90vh;
-background:#000;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+background:#000;
 }
-.hero h1{font-size:55px;color:#ff0000;letter-spacing:3px}
-.hero p{font-size:22px;margin-top:15px}
+.hero h1{font-size:55px;color:#ff0000}
+.hero p{font-size:22px;margin-top:10px}
 
-.hero-logo{
-width:160px;
-margin:0 auto 20px;
-display:block;
-filter: drop-shadow(0 0 15px red);
-}
-
-/* SECTION */
 .section{padding:60px 20px;max-width:1200px;margin:auto}
 .title{text-align:center;font-size:36px;color:#ff4d4d;margin-bottom:40px}
 
-/* PROGRAMS */
 .programs{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
+
 .card{
 background:#151515;
 border-radius:20px;
@@ -50,9 +41,7 @@ height:200px;
 object-fit:cover;
 }
 .card div{padding:20px;text-align:center}
-.card h3{color:#ff4d4d;margin-bottom:10px}
 
-/* CONTACT */
 .contact{
 background:#111;
 padding:40px;
@@ -66,24 +55,9 @@ padding:14px 30px;
 border-radius:30px;
 text-decoration:none;
 color:#fff;
-font-size:18px;
 }
 .call{background:#ff0000}
 .whatsapp{background:#25D366}
-
-/* FLOATING WHATSAPP */
-.float-whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:#fff;
-padding:15px 18px;
-border-radius:50%;
-font-size:26px;
-text-decoration:none;
-box-shadow:0 0 20px rgba(0,0,0,.5);
-}
 
 footer{
 background:black;
@@ -96,23 +70,20 @@ color:#aaa;
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div>
-    <img src="images/logo.jpg" class="hero-logo" alt="Spartan Gym">
     <h1>SPARTAN GYM</h1>
     <p>Muscle • Strength • Transformation</p>
   </div>
 </div>
 
-<!-- PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
 
 <div class="programs">
 
 <div class="card">
-<img src="images/muscle.jpg" alt="Muscle Gain">
+<img src="https://dummyimage.com/600x400/ff0000/ffffff&text=Muscle+Gain">
 <div>
 <h3>💪 Muscle Gain</h3>
 <p>Build size & strength.</p>
@@ -120,25 +91,24 @@ color:#aaa;
 </div>
 
 <div class="card">
-<img src="images/weightloss.jpg" alt="Weight Loss">
+<img src="https://dummyimage.com/600x400/25D366/ffffff&text=Weight+Loss">
 <div>
 <h3>🔥 Weight Loss</h3>
-<p>Fat burn & HIIT training.</p>
+<p>Fat burn & HIIT.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="images/strength.jpg" alt="Strength Training">
+<img src="https://dummyimage.com/600x400/000000/ffffff&text=Strength+Training">
 <div>
 <h3>⚡ Strength Training</h3>
-<p>Increase power & endurance.</p>
+<p>Increase power.</p>
 </div>
 </div>
 
 </div>
 </div>
 
-<!-- CONTACT -->
 <div class="section">
 <div class="title">CONTACT US</div>
 
@@ -149,20 +119,12 @@ New Delhi – 110059<br><br>
 
 <a href="tel:9716127116" class="call">📞 Call Now</a>
 
-<!-- ✅ DIRECT WHATSAPP MESSAGE -->
-<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%0AI%20want%20to%20join%20the%20gym" 
+<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%0AI%20want%20to%20join"
 class="whatsapp">
 💬 WhatsApp Now
 </a>
-
 </div>
 </div>
-
-<!-- FLOATING WHATSAPP BUTTON -->
-<a class="float-whatsapp"
-href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%0AI%20want%20to%20join">
-💬
-</a>
 
 <footer>
 © 2025 SPARTAN GYM | NO EXCUSES 💪
