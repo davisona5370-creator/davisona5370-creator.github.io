@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPARTAN GYM | Warriors Only</title>
+<title>SPARTAN GYM</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
@@ -47,25 +47,38 @@ margin:0 auto 50px;
 font-size:18px;
 }
 
-/* PROGRAM SLIDER */
-.slider{display:flex;gap:30px;overflow:hidden}
-.slide{
-min-width:320px;
+/* PROGRAMS */
+.programs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.program{
 background:#141414;
 border-radius:25px;
-box-shadow:0 0 35px rgba(255,0,0,.35);
+padding:35px;
+text-align:center;
+box-shadow:0 0 30px rgba(255,0,0,.35);
 transition:.4s;
 }
-.slide:hover{transform:scale(1.05)}
-.slide img{
-width:100%;
-height:240px;
-object-fit:cover;
-border-radius:25px 25px 0 0;
+
+.program:hover{
+transform:translateY(-10px);
+box-shadow:0 0 45px rgba(255,0,0,.6);
 }
-.slide div{padding:30px;text-align:center}
-.slide h3{color:#f5c16c;font-size:24px;margin-bottom:10px}
-.slide p{color:#ccc}
+
+.program h3{
+color:#f5c16c;
+font-size:26px;
+margin-bottom:15px;
+}
+
+.program p{
+color:#ccc;
+line-height:1.7;
+font-size:16px;
+}
 
 /* FEES */
 .fees-box{
@@ -74,11 +87,6 @@ border-radius:30px;
 padding:50px;
 text-align:center;
 box-shadow:0 0 50px rgba(255,0,0,.4);
-animation:glow 2s infinite alternate;
-}
-@keyframes glow{
-from{box-shadow:0 0 25px rgba(255,0,0,.4)}
-to{box-shadow:0 0 55px rgba(255,0,0,.8)}
 }
 .old-price{
 font-size:26px;
@@ -90,12 +98,6 @@ font-size:44px;
 color:#25D366;
 font-weight:bold;
 margin:15px 0;
-animation:pulse 1.5s infinite;
-}
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.08)}
-100%{transform:scale(1)}
 }
 .limited{
 color:#f5c16c;
@@ -183,46 +185,58 @@ color:#888;
   <div class="hero-content">
     <img src="logo.png" class="hero-logo">
     <h1>SPARTAN GYM</h1>
-    <p>Train Hard • Stay Strong • Never Quit</p>
+    <p>Strong Body • Strong Mind • Strong Life</p>
   </div>
 </div>
 
-<!-- PROGRAMS -->
+<!-- OUR PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
-<p class="subtitle">Yahan sirf workout nahi hota – yahan warriors bante hain 💪</p>
+<p class="subtitle">
+Har body alag hoti hai.  
+Isliye hamare programs **result-oriented** hote hain 💪
+</p>
 
-<div class="slider" id="programSlider">
-<div class="slide">
-<img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
-<div>
-<h3>💪 BEAST MODE MUSCLE</h3>
-<p>Heavy lifting for serious size & power.</p>
-</div>
-</div>
+<div class="programs">
 
-<div class="slide">
-<img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
-<div>
-<h3>🔥 EXTREME FAT BURN</h3>
-<p>HIIT + cardio = visible fat loss.</p>
-</div>
+<div class="program">
+<h3>💪 Muscle Building</h3>
+<p>
+Jo log lean body se muscular body banana chahte hain.  
+Proper weight training, form guidance aur diet support ke sath.
+</p>
 </div>
 
-<div class="slide">
-<img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
-<div>
-<h3>⚡ STRENGTH & POWER</h3>
-<p>Lift heavier. Feel unstoppable.</p>
+<div class="program">
+<h3>🔥 Weight Loss</h3>
+<p>
+Fat loss ke liye cardio, HIIT aur functional workouts.  
+Healthy tarike se weight kam karo, body fit banao.
+</p>
 </div>
+
+<div class="program">
+<h3>⚡ Strength Training</h3>
+<p>
+Power, stamina aur endurance badhane ke liye.  
+Daily life aur sports performance dono improve hoti hai.
+</p>
 </div>
+
+<div class="program">
+<h3>🏋️ General Fitness</h3>
+<p>
+Beginners ke liye best.  
+Full body workout, flexibility aur overall fitness pe focus.
+</p>
+</div>
+
 </div>
 </div>
 
 <!-- FEES -->
 <div class="section">
 <div class="title">MEMBERSHIP FEES</div>
-
 <div class="fees-box">
 <p class="old-price">₹1000 / Month</p>
 <div class="new-offer">40% – 50% OFF</div>
@@ -235,7 +249,7 @@ JOIN NOW ON WHATSAPP
 
 <!-- GALLERY -->
 <div class="section">
-<div class="title">GYM VIBES</div>
+<div class="title">GYM GALLERY</div>
 <div class="gallery">
 <img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg">
 <img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg">
@@ -253,7 +267,7 @@ JOIN NOW ON WHATSAPP
 
 <!-- CONTACT -->
 <div class="section">
-<div class="title">JOIN THE SPARTANS</div>
+<div class="title">CONTACT US</div>
 <div class="contact">
 📍 Plot No A-3, Near SBI ATM,<br>
 Vikas Nagar, New Delhi – 110059<br><br>
@@ -270,27 +284,18 @@ Vikas Nagar, New Delhi – 110059<br><br>
 </footer>
 
 <script>
-/* HERO IMAGE AUTO CHANGE */
+/* HERO IMAGE CHANGE */
 const heroImages=[
 "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
 "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
 "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
 ];
-let hi=0;
+let i=0;
 const hero=document.getElementById("hero");
 setInterval(()=>{
-hero.style.backgroundImage=`url(${heroImages[hi]})`;
-hi=(hi+1)%heroImages.length;
+hero.style.backgroundImage=`url(${heroImages[i]})`;
+i=(i+1)%heroImages.length;
 },5000);
-
-/* PROGRAM SLIDER AUTO MOVE */
-const slider=document.getElementById("programSlider");
-setInterval(()=>{
-slider.scrollBy({left:350,behavior:"smooth"});
-if(slider.scrollLeft+slider.clientWidth>=slider.scrollWidth-5){
-slider.scrollTo({left:0,behavior:"smooth"});
-}
-},3000);
 </script>
 
 </body>
