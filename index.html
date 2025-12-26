@@ -3,135 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPARTAN GYM</title>
+<title>SPARTAN GYM | Train Like a Warrior</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#0a0a0a;color:#fff}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#0b0b0b;
+  color:#fff;
+}
 
 /* HERO */
 .hero{
-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-background-size:cover;
-background-position:center;
-transition:background-image 1s ease-in-out;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  transition:1s ease;
 }
 
 .hero::after{
-content:"";
-position:absolute;
-top:0;left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.85);
-z-index:0;
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.75));
 }
 
 .hero-content{
-position:relative;
-z-index:1;
+  position:relative;
+  z-index:1;
 }
 
-/* LOGO */
 .hero-logo{
-width:180px;
-margin:0 auto 20px;
-display:block;
-filter: drop-shadow(0 0 20px red);
+  width:180px;
+  margin-bottom:20px;
+  filter:drop-shadow(0 0 20px red);
 }
 
-.hero h1{font-size:60px;color:#ff0000;letter-spacing:3px}
-.hero p{font-size:22px;margin-top:15px}
+.hero h1{
+  font-size:64px;
+  color:#ff1e1e;
+  letter-spacing:4px;
+}
+
+.hero p{
+  font-size:22px;
+  color:#f5c16c;
+  margin-top:10px;
+}
 
 /* SECTION */
-.section{padding:70px 20px;max-width:1200px;margin:auto}
-.title{text-align:center;font-size:38px;color:#ff4d4d;margin-bottom:40px}
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  font-size:42px;
+  color:#ff1e1e;
+  margin-bottom:50px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#bbb;
+  max-width:700px;
+  margin:0 auto 50px;
+  font-size:18px;
+}
 
 /* PROGRAMS */
 .programs{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
+
 .card{
-background:#151515;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 0 25px rgba(255,0,0,.35);
+  background:#141414;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(255,0,0,.25);
 }
+
 .card img{
-width:100%;
-height:220px;
-object-fit:cover;
+  width:100%;
+  height:230px;
+  object-fit:cover;
 }
-.card div{padding:20px;text-align:center}
-.card h3{color:#ff4d4d;margin-bottom:10px}
+
+.card div{
+  padding:25px;
+  text-align:center;
+}
+
+.card h3{
+  color:#f5c16c;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#ccc;
+}
 
 /* GALLERY */
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
+
 .gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:15px;
-box-shadow:0 0 20px rgba(255,0,0,.3);
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(255,0,0,.25);
 }
 
 /* CONTACT */
 .contact{
-background:#111;
-padding:40px;
-border-radius:20px;
-text-align:center;
+  background:#121212;
+  padding:45px;
+  border-radius:25px;
+  text-align:center;
 }
+
 .contact a{
-display:inline-block;
-margin:10px;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-color:#fff;
-font-size:18px;
+  display:inline-block;
+  margin:12px;
+  padding:15px 35px;
+  border-radius:35px;
+  text-decoration:none;
+  font-size:18px;
+  color:#fff;
 }
-.call{background:#ff0000}
-.whatsapp{background:#25D366}
+
+.call{
+  background:#ff1e1e;
+}
+
+.whatsapp{
+  background:#25D366;
+}
 
 /* MAP */
 .map iframe{
-width:100%;
-height:350px;
-border:0;
-border-radius:20px;
+  width:100%;
+  height:350px;
+  border:0;
+  border-radius:25px;
 }
 
 /* FLOAT WHATSAPP */
 .float-whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:16px 18px;
-border-radius:50%;
-font-size:26px;
-text-decoration:none;
-box-shadow:0 0 20px rgba(0,0,0,.5);
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:white;
+  padding:18px;
+  border-radius:50%;
+  font-size:26px;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(0,0,0,.6);
 }
 
+/* FOOTER */
 footer{
-background:black;
-text-align:center;
-padding:20px;
-color:#aaa;
+  background:black;
+  text-align:center;
+  padding:25px;
+  color:#888;
 }
 </style>
 </head>
@@ -141,22 +196,26 @@ color:#aaa;
 <!-- HERO -->
 <div class="hero" id="hero">
   <div class="hero-content">
-    <img src="logo.png" alt="Spartan Gym Logo" class="hero-logo">
+    <img src="logo.png" class="hero-logo">
     <h1>SPARTAN GYM</h1>
-    <p>Muscle • Strength • Transformation</p>
+    <p>Train Like a Warrior • Build Like a Legend</p>
   </div>
 </div>
 
 <!-- PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
+<p class="subtitle">
+We don’t promise shortcuts.  
+We build discipline, power, and real transformation.
+</p>
 
 <div class="programs">
 <div class="card">
 <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
 <div>
 <h3>💪 Muscle Gain</h3>
-<p>Build muscle & raw strength.</p>
+<p>Serious weight training for serious results.</p>
 </div>
 </div>
 
@@ -164,7 +223,7 @@ color:#aaa;
 <img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
 <div>
 <h3>🔥 Weight Loss</h3>
-<p>Fat burn & cardio training.</p>
+<p>High-intensity workouts to burn fat fast.</p>
 </div>
 </div>
 
@@ -172,7 +231,7 @@ color:#aaa;
 <img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
 <div>
 <h3>⚡ Strength Training</h3>
-<p>Power & endurance boost.</p>
+<p>Increase power, stamina, and confidence.</p>
 </div>
 </div>
 </div>
@@ -180,7 +239,7 @@ color:#aaa;
 
 <!-- GALLERY -->
 <div class="section">
-<div class="title">GYM GALLERY</div>
+<div class="title">GYM ATMOSPHERE</div>
 <div class="gallery">
 <img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg">
 <img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg">
@@ -190,58 +249,45 @@ color:#aaa;
 
 <!-- LOCATION -->
 <div class="section">
-<div class="title">OUR LOCATION</div>
+<div class="title">FIND US</div>
 <div class="map">
-<iframe src="https://maps.google.com/maps?q=Vikas%20Nagar%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=Vikas%20Nagar%20New%20Delhi&t=&z=15&output=embed"></iframe>
 </div>
 </div>
 
 <!-- CONTACT -->
 <div class="section">
-<div class="title">CONTACT US</div>
+<div class="title">JOIN THE WARRIORS</div>
 <div class="contact">
 📍 Plot No A-3, Near SBI ATM,<br>
-Vikas Nagar, Karnal Bhatiya Road,<br>
-New Delhi – 110059<br><br>
+Vikas Nagar, New Delhi – 110059<br><br>
 
 <a href="tel:9716127116" class="call">📞 Call Now</a>
-<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join"
-class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join" class="whatsapp">💬 WhatsApp</a>
 </div>
 </div>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪"
-class="float-whatsapp">💬</a>
+<a href="https://wa.me/919716127116" class="float-whatsapp">💬</a>
 
 <footer>
-© 2025 SPARTAN GYM | NO EXCUSES 💪
+© 2025 SPARTAN GYM | NO EXCUSES. ONLY RESULTS.
 </footer>
 
 <script>
-const images = [
-  "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
-  "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
-  "https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
-  "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg",
-  "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
+const images=[
+"https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
+"https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
+"https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
+"https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
 ];
 
-const hero = document.getElementById("hero");
-let lastIndex = -1;
+let i=0;
+const hero=document.getElementById("hero");
 
-function changeBackground(){
-  let index;
-  do{
-    index = Math.floor(Math.random() * images.length);
-  }while(index === lastIndex);
-
-  hero.style.backgroundImage = `url(${images[index]})`;
-  lastIndex = index;
-}
-
-changeBackground();
-setInterval(changeBackground, 5000);
+setInterval(()=>{
+hero.style.backgroundImage=`url(${images[i]})`;
+i=(i+1)%images.length;
+},5000);
 </script>
 
 </body>
