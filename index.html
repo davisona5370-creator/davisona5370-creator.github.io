@@ -32,7 +32,6 @@ background:rgba(0,0,0,.85);
 z-index:0;
 }
 
-/* CONTENT ABOVE OVERLAY */
 .hero-content{
 position:relative;
 z-index:1;
@@ -114,7 +113,7 @@ border:0;
 border-radius:20px;
 }
 
-/* FLOATING WHATSAPP */
+/* FLOAT WHATSAPP */
 .float-whatsapp{
 position:fixed;
 bottom:20px;
@@ -151,19 +150,31 @@ color:#aaa;
 <!-- PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
+
 <div class="programs">
-  <div class="card">
-    <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
-    <div><h3>💪 Muscle Gain</h3><p>Build muscle & strength.</p></div>
-  </div>
-  <div class="card">
-    <img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
-    <div><h3>🔥 Weight Loss</h3><p>Fat burn & cardio.</p></div>
-  </div>
-  <div class="card">
-    <img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
-    <div><h3>⚡ Strength Training</h3><p>Power & endurance.</p></div>
-  </div>
+<div class="card">
+<img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
+<div>
+<h3>💪 Muscle Gain</h3>
+<p>Build muscle & raw strength.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
+<div>
+<h3>🔥 Weight Loss</h3>
+<p>Fat burn & cardio training.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
+<div>
+<h3>⚡ Strength Training</h3>
+<p>Power & endurance boost.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -171,9 +182,9 @@ color:#aaa;
 <div class="section">
 <div class="title">GYM GALLERY</div>
 <div class="gallery">
-  <img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg">
-  <img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg">
-  <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg">
+<img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg">
+<img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg">
+<img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg">
 </div>
 </div>
 
@@ -192,12 +203,16 @@ color:#aaa;
 📍 Plot No A-3, Near SBI ATM,<br>
 Vikas Nagar, Karnal Bhatiya Road,<br>
 New Delhi – 110059<br><br>
+
 <a href="tel:9716127116" class="call">📞 Call Now</a>
-<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join" class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join"
+class="whatsapp">💬 WhatsApp</a>
 </div>
 </div>
 
-<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪" class="float-whatsapp">💬</a>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪"
+class="float-whatsapp">💬</a>
 
 <footer>
 © 2025 SPARTAN GYM | NO EXCUSES 💪
@@ -205,22 +220,28 @@ New Delhi – 110059<br><br>
 
 <script>
 const images = [
-"https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
-"https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
-"https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
-"https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg"
+  "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
+  "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
+  "https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
+  "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg",
+  "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
 ];
 
-let index = 0;
 const hero = document.getElementById("hero");
+let lastIndex = -1;
 
 function changeBackground(){
+  let index;
+  do{
+    index = Math.floor(Math.random() * images.length);
+  }while(index === lastIndex);
+
   hero.style.backgroundImage = `url(${images[index]})`;
-  index = (index + 1) % images.length;
+  lastIndex = index;
 }
 
 changeBackground();
-setInterval(changeBackground, 5000); // 5 second me change
+setInterval(changeBackground, 5000);
 </script>
 
 </body>
