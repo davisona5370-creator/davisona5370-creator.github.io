@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPARTAN GYM | Built Different</title>
+<title>SPARTAN GYM | Warriors Only</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-body{background:#0b0b0b;color:#fff}
+body{background:#0b0b0b;color:#fff;overflow-x:hidden}
 
 /* HERO */
 .hero{
@@ -19,13 +19,13 @@ text-align:center;
 background-size:cover;
 background-position:center;
 position:relative;
-transition:1s ease;
+transition:1s;
 }
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.7));
+background:rgba(0,0,0,.8);
 }
 .hero-content{position:relative;z-index:1}
 .hero-logo{
@@ -33,67 +33,54 @@ width:180px;
 margin-bottom:20px;
 filter:drop-shadow(0 0 25px red);
 }
-.hero h1{
-font-size:64px;
-color:#ff1e1e;
-letter-spacing:4px;
-}
-.hero p{
-font-size:22px;
-color:#f5c16c;
-margin-top:10px;
-}
+.hero h1{font-size:64px;color:#ff1e1e;letter-spacing:4px}
+.hero p{font-size:22px;color:#f5c16c}
 
 /* SECTION */
 .section{padding:80px 20px;max-width:1200px;margin:auto}
-.title{
-text-align:center;
-font-size:42px;
-color:#ff1e1e;
-margin-bottom:15px;
-}
+.title{text-align:center;font-size:42px;color:#ff1e1e;margin-bottom:15px}
 .subtitle{
 text-align:center;
-max-width:750px;
+color:#bbb;
+max-width:800px;
 margin:0 auto 50px;
 font-size:18px;
-color:#bbb;
 }
 
-/* PROGRAMS */
-.programs{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
+/* PROGRAM SLIDER */
+.slider{
+display:flex;
+gap:30px;
+overflow:hidden;
 }
-.card{
+.slide{
+min-width:320px;
 background:#141414;
 border-radius:25px;
-overflow:hidden;
 box-shadow:0 0 35px rgba(255,0,0,.35);
 transition:.4s;
 }
-.card:hover{
-transform:translateY(-10px);
+.slide:hover{
+transform:scale(1.05);
 box-shadow:0 0 45px rgba(255,0,0,.6);
 }
-.card img{
+.slide img{
 width:100%;
 height:240px;
 object-fit:cover;
+border-radius:25px 25px 0 0;
 }
-.card div{
+.slide div{
 padding:30px;
 text-align:center;
 }
-.card h3{
+.slide h3{
 color:#f5c16c;
 font-size:24px;
-margin-bottom:12px;
+margin-bottom:10px;
 }
-.card p{
+.slide p{
 color:#ccc;
-font-size:16px;
 line-height:1.6;
 }
 
@@ -107,7 +94,7 @@ gap:25px;
 width:100%;
 height:230px;
 object-fit:cover;
-border-radius:18px;
+border-radius:20px;
 box-shadow:0 0 25px rgba(255,0,0,.3);
 }
 
@@ -123,9 +110,9 @@ display:inline-block;
 margin:12px;
 padding:15px 35px;
 border-radius:35px;
-text-decoration:none;
 font-size:18px;
 color:#fff;
+text-decoration:none;
 }
 .call{background:#ff1e1e}
 .whatsapp{background:#25D366}
@@ -152,6 +139,7 @@ text-decoration:none;
 box-shadow:0 0 25px rgba(0,0,0,.6);
 }
 
+/* FOOTER */
 footer{
 background:black;
 text-align:center;
@@ -168,7 +156,7 @@ color:#888;
   <div class="hero-content">
     <img src="logo.png" class="hero-logo">
     <h1>SPARTAN GYM</h1>
-    <p>No Excuses • Only Results</p>
+    <p>Train Hard • Stay Strong • Never Quit</p>
   </div>
 </div>
 
@@ -176,41 +164,52 @@ color:#888;
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
 <p class="subtitle">
-Yeh normal workouts nahi hain.  
-Yeh **body, mind aur discipline** banane ke programs hain.
+Yahan sirf workout nahi hota.  
+Yahan **warriors bante hain** 💪
 </p>
 
-<div class="programs">
+<div class="slider" id="programSlider">
 
-<div class="card">
+<div class="slide">
 <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
 <div>
-<h3>💪 MUSCLE BUILDING BEAST MODE</h3>
+<h3>💪 BEAST MODE MUSCLE</h3>
 <p>
-Heavy lifting, progressive overload aur proper form.  
-Jo log **real size aur power** chahte hain unke liye.
+Heavy lifting + discipline.  
+Jo log **size, shape aur power** chahte hain.
 </p>
 </div>
 </div>
 
-<div class="card">
+<div class="slide">
 <img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
 <div>
-<h3>🔥 EXTREME FAT LOSS PROGRAM</h3>
+<h3>🔥 EXTREME FAT BURN</h3>
 <p>
-High-intensity cardio + HIIT workouts.  
-Pasina, burn aur **visible fat loss guarantee**.
+HIIT + cardio madness.  
+Pasina, burn aur **fast results**.
 </p>
 </div>
 </div>
 
-<div class="card">
+<div class="slide">
 <img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
 <div>
-<h3>⚡ STRENGTH & POWER TRAINING</h3>
+<h3>⚡ STRENGTH & POWER</h3>
 <p>
-Strength, stamina aur confidence boost.  
-Lift heavier, move stronger, feel unstoppable.
+Pure strength focus.  
+Lift heavy. Feel unstoppable.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg">
+<div>
+<h3>🏋️ ATHLETIC FITNESS</h3>
+<p>
+Agility, stamina & full-body control.  
+Move like an athlete.
 </p>
 </div>
 </div>
@@ -220,7 +219,7 @@ Lift heavier, move stronger, feel unstoppable.
 
 <!-- GALLERY -->
 <div class="section">
-<div class="title">GYM ATMOSPHERE</div>
+<div class="title">GYM VIBES</div>
 <div class="gallery">
 <img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg">
 <img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg">
@@ -238,7 +237,7 @@ Lift heavier, move stronger, feel unstoppable.
 
 <!-- CONTACT -->
 <div class="section">
-<div class="title">JOIN SPARTAN TODAY</div>
+<div class="title">JOIN THE SPARTANS</div>
 <div class="contact">
 📍 Plot No A-3, Near SBI ATM,<br>
 Vikas Nagar, New Delhi – 110059<br><br>
@@ -251,22 +250,31 @@ Vikas Nagar, New Delhi – 110059<br><br>
 <a href="https://wa.me/919716127116" class="float-whatsapp">💬</a>
 
 <footer>
-© 2025 SPARTAN GYM | BUILT DIFFERENT 💪
+© 2025 SPARTAN GYM | WARRIORS TRAIN HERE 💪
 </footer>
 
 <script>
-const images=[
+/* HERO AUTO IMAGE */
+const heroImages=[
 "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80",
 "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
-"https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
 "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
 ];
-let i=0;
+let hi=0;
 const hero=document.getElementById("hero");
 setInterval(()=>{
-hero.style.backgroundImage=`url(${images[i]})`;
-i=(i+1)%images.length;
+hero.style.backgroundImage=`url(${heroImages[hi]})`;
+hi=(hi+1)%heroImages.length;
 },5000);
+
+/* PROGRAM AUTO SLIDE */
+const slider=document.getElementById("programSlider");
+setInterval(()=>{
+slider.scrollBy({left:350,behavior:"smooth"});
+if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth-5){
+slider.scrollTo({left:0,behavior:"smooth"});
+}
+},3000);
 </script>
 
 </body>
