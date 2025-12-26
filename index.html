@@ -9,26 +9,32 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:#0a0a0a;color:#fff}
 
+/* HERO */
 .hero{
 height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:#000;
 }
 .hero h1{font-size:55px;color:#ff0000}
 .hero p{font-size:22px;margin-top:10px}
 
+/* SECTION */
 .section{padding:60px 20px;max-width:1200px;margin:auto}
 .title{text-align:center;font-size:36px;color:#ff4d4d;margin-bottom:40px}
 
+/* PROGRAMS */
 .programs{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
-
 .card{
 background:#151515;
 border-radius:20px;
@@ -42,6 +48,19 @@ object-fit:cover;
 }
 .card div{padding:20px;text-align:center}
 
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.gallery img{
+width:100%;
+border-radius:15px;
+box-shadow:0 0 20px rgba(255,0,0,.3);
+}
+
+/* CONTACT */
 .contact{
 background:#111;
 padding:40px;
@@ -70,6 +89,7 @@ color:#aaa;
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
   <div>
     <h1>SPARTAN GYM</h1>
@@ -77,13 +97,14 @@ color:#aaa;
   </div>
 </div>
 
+<!-- PROGRAMS -->
 <div class="section">
 <div class="title">OUR PROGRAMS</div>
 
 <div class="programs">
 
 <div class="card">
-<img src="https://dummyimage.com/600x400/ff0000/ffffff&text=Muscle+Gain">
+<img src="https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg">
 <div>
 <h3>💪 Muscle Gain</h3>
 <p>Build size & strength.</p>
@@ -91,24 +112,35 @@ color:#aaa;
 </div>
 
 <div class="card">
-<img src="https://dummyimage.com/600x400/25D366/ffffff&text=Weight+Loss">
+<img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg">
 <div>
 <h3>🔥 Weight Loss</h3>
-<p>Fat burn & HIIT.</p>
+<p>Fat burn & HIIT training.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://dummyimage.com/600x400/000000/ffffff&text=Strength+Training">
+<img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg">
 <div>
 <h3>⚡ Strength Training</h3>
-<p>Increase power.</p>
+<p>Increase power & endurance.</p>
 </div>
 </div>
 
 </div>
 </div>
 
+<!-- GALLERY -->
+<div class="section">
+<div class="title">GYM GALLERY</div>
+<div class="gallery">
+<img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg">
+<img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg">
+<img src="https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg">
+</div>
+</div>
+
+<!-- CONTACT -->
 <div class="section">
 <div class="title">CONTACT US</div>
 
