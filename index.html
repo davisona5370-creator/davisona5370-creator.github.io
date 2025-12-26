@@ -11,9 +11,9 @@ body{background:#0a0a0a;color:#fff}
 
 /* HERO */
 .hero{
-height:90vh;
+height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
 url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
@@ -22,6 +22,15 @@ align-items:center;
 justify-content:center;
 text-align:center;
 }
+
+/* LOGO */
+.hero-logo{
+width:180px;
+margin:0 auto 20px;
+display:block;
+filter: drop-shadow(0 0 20px red);
+}
+
 .hero h1{font-size:60px;color:#ff0000;letter-spacing:3px}
 .hero p{font-size:22px;margin-top:15px}
 
@@ -101,6 +110,7 @@ padding:16px 18px;
 border-radius:50%;
 font-size:26px;
 text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 
 footer{
@@ -117,6 +127,7 @@ color:#aaa;
 <!-- HERO -->
 <div class="hero">
   <div>
+    <img src="logo.png" alt="Spartan Gym Logo" class="hero-logo">
     <h1>SPARTAN GYM</h1>
     <p>Muscle • Strength • Transformation</p>
   </div>
@@ -132,7 +143,7 @@ color:#aaa;
 <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
 <div>
 <h3>💪 Muscle Gain</h3>
-<p>Heavy lifting & muscle growth.</p>
+<p>Build muscle & raw strength.</p>
 </div>
 </div>
 
@@ -140,7 +151,7 @@ color:#aaa;
 <img src="https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg">
 <div>
 <h3>🔥 Weight Loss</h3>
-<p>Cardio, HIIT & fat burn.</p>
+<p>Fat burn, HIIT & cardio.</p>
 </div>
 </div>
 
@@ -148,7 +159,7 @@ color:#aaa;
 <img src="https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg">
 <div>
 <h3>⚡ Strength Training</h3>
-<p>Power & full body strength.</p>
+<p>Power & endurance boost.</p>
 </div>
 </div>
 
@@ -184,6 +195,7 @@ Vikas Nagar, Karnal Bhatiya Road,<br>
 New Delhi – 110059<br><br>
 
 <a href="tel:9716127116" class="call">📞 Call Now</a>
+
 <a href="https://wa.me/919716127116?text=Hello%20Spartan%20Gym%20💪%20I%20want%20to%20join"
 class="whatsapp">💬 WhatsApp</a>
 </div>
